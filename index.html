@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>樱花动漫下载-樱花动漫下载安装指南_动漫资源下载平台_离线观看方法</title>
+<meta name="description" content="樱花动漫下载主题首页，介绍樱花动漫下载的安装与使用方式，整理动漫资源分类、离线观看与下载前须知，帮助访问者了解樱花动漫下载的基本流程与常见问题。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ff6f91'/%3E%3Cpath d='M32 14c5 8 5 28 0 36-5-8-5-28 0-36z' fill='%23fff'/%3E%3Cpath d='M14 32c8-5 28-5 36 0-8 5-28 5-36 0z' fill='%23fff' opacity='.8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --pink:#ff6f91;
+  --pink-deep:#e94f78;
+  --ink:#2b2126;
+  --muted:#7a6a72;
+  --bg:#fff7f9;
+  --card:#ffffff;
+  --line:#f3dbe3;
+  --soft:#ffe9ef;
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--pink-deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px;}
+
+/* 头部 */
+header.site-head{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,247,249,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  max-width:1120px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  font-weight:800;font-size:19px;color:var(--ink);letter-spacing:.5px;
+  white-space:nowrap;
+}
+.logo:hover{text-decoration:none;}
+.logo svg{width:34px;height:34px;flex:none;}
+nav.main-nav{margin-left:auto;}
+nav.main-nav ul{display:flex;gap:6px;list-style:none;flex-wrap:wrap;}
+nav.main-nav a{
+  display:block;padding:7px 13px;border-radius:999px;
+  font-size:14.5px;color:var(--muted);font-weight:600;
+}
+nav.main-nav a:hover{background:var(--soft);color:var(--pink-deep);text-decoration:none;}
+
+/* 首屏 */
+.hero{
+  padding:56px 0 44px;
+  background:
+    radial-gradient(circle at 88% 12%, #ffe1ea 0, transparent 42%),
+    radial-gradient(circle at 6% 88%, #fff0f4 0, transparent 46%);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;
+}
+.eyebrow{
+  display:inline-block;font-size:13px;font-weight:700;letter-spacing:1.5px;
+  color:var(--pink-deep);background:var(--soft);
+  padding:5px 14px;border-radius:999px;margin-bottom:18px;
+}
+h1{
+  font-size:clamp(30px,4.4vw,46px);
+  line-height:1.25;letter-spacing:1px;font-weight:900;
+  margin-bottom:18px;
+}
+h1 .hl{
+  background:linear-gradient(transparent 62%,#ffd0dd 62%);
+  padding:0 2px;
+}
+.hero-lead{
+  font-size:16.5px;color:#584750;max-width:34em;margin-bottom:26px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 26px;border-radius:999px;font-weight:700;font-size:15.5px;
+  border:1.5px solid transparent;transition:.18s;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--pink),var(--pink-deep));
+  color:#fff;box-shadow:0 8px 20px rgba(233,79,120,.28);
+}
+.btn-primary:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 12px 24px rgba(233,79,120,.34);}
+.btn-ghost{
+  background:#fff;border-color:var(--line);color:var(--pink-deep);
+}
+.btn-ghost:hover{text-decoration:none;border-color:var(--pink);}
+.hero-note{font-size:13.5px;color:var(--muted);margin-top:16px;}
+
+.hero-art{
+  background:var(--card);border:1px solid var(--line);border-radius:26px;
+  padding:22px;box-shadow:0 16px 40px rgba(233,79,120,.10);
+}
+.hero-art svg{width:100%;height:auto;display:block;}
+.hero-art .cap{
+  font-size:13px;color:var(--muted);text-align:center;margin-top:10px;
+}
+
+/* 通用分区 */
+section{padding:52px 0;}
+.section-head{margin-bottom:28px;}
+.section-head h2{
+  font-size:clamp(22px,2.6vw,28px);font-weight:800;letter-spacing:.5px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-head h2::before{
+  content:"";width:6px;height:24px;border-radius:3px;
+  background:linear-gradient(var(--pink),var(--pink-deep));display:inline-block;
+}
+.section-head p{color:var(--muted);font-size:15px;margin-top:8px;max-width:52em;}
+
+/* 卡片网格 */
+.grid{display:grid;gap:18px;}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;transition:.2s;
+}
+.card:hover{border-color:#f6bfd0;box-shadow:0 10px 26px rgba(233,79,120,.09);}
+.card h3{font-size:17px;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.card h3 .ic{
+  width:28px;height:28px;border-radius:9px;background:var(--soft);
+  display:inline-flex;align-items:center;justify-content:center;flex:none;
+}
+.card p{font-size:14.5px;color:#5d4a53;}
+.card p + p{margin-top:8px;}
+
+/* 步骤 */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:st;}
+.step{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 20px;position:relative;
+}
+.step::before{
+  counter-increment:st;content:counter(st,decimal-leading-zero);
+  font-size:13px;font-weight:800;color:var(--pink-deep);
+  background:var(--soft);border-radius:8px;padding:2px 9px;display:inline-block;margin-bottom:12px;
+}
+.step h3{font-size:16px;font-weight:800;margin-bottom:8px;}
+.step p{font-size:14px;color:#5d4a53;}
+
+/* 分类列表 */
+.cat-list{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.cat{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;display:flex;align-items:center;gap:12px;
+}
+.cat svg{width:26px;height:26px;flex:none;}
+.cat strong{display:block;font-size:15px;}
+.cat span{font-size:12.5px;color:var(--muted);}
+
+/* 提示条 */
+.notice{
+  background:linear-gradient(135deg,#fff0f4,#fff9fb);
+  border:1px solid var(--line);border-left:5px solid var(--pink);
+  border-radius:14px;padding:20px 24px;font-size:14.5px;color:#5d4a53;
+}
+.notice strong{color:var(--pink-deep);}
+
+/* FAQ */
+.faq{display:grid;gap:12px;}
+details{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:16px 20px;
+}
+details[open]{border-color:#f6bfd0;}
+summary{
+  cursor:pointer;font-weight:700;font-size:15.5px;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";color:var(--pink-deep);font-weight:800;font-size:19px;}
+details[open] summary::after{content:"−";}
+details p{font-size:14.5px;color:#5d4a53;margin-top:12px;}
+
+/* 表格 */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff;}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px;}
+th,td{padding:13px 18px;text-align:left;border-bottom:1px solid var(--line);}
+th{background:var(--soft);font-weight:800;color:#4a3540;white-space:nowrap;}
+tr:last-child td{border-bottom:none;}
+td{color:#5d4a53;}
+
+/* 页尾 */
+footer{
+  background:#2b2126;color:#e6d8de;padding:44px 0 26px;margin-top:20px;
+}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;}
+footer .logo{color:#fff;font-size:17px;margin-bottom:12px;}
+footer p{font-size:14px;color:#c4b3bb;line-height:1.8;}
+footer h4{font-size:14px;color:#fff;margin-bottom:12px;letter-spacing:.5px;}
+footer ul{list-style:none;display:grid;gap:8px;}
+footer ul a{color:#c4b3bb;font-size:14px;}
+footer ul a:hover{color:var(--pink);}
+.foot-bottom{
+  border-top:1px solid #443640;margin-top:32px;padding-top:18px;
+  font-size:12.5px;color:#9c8a93;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+
+/* 响应式 */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:32px;}
+  .hero-art{order:-1;max-width:420px;margin:0 auto;}
+  .grid-3,.grid-2{grid-template-columns:1fr 1fr;}
+  .steps{grid-template-columns:1fr 1fr;}
+  .cat-list{grid-template-columns:1fr 1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+  .foot-grid>div:first-child{grid-column:1/-1;}
+}
+@media(max-width:620px){
+  .head-inner{padding:10px 16px;gap:10px;}
+  nav.main-nav{width:100%;margin-left:0;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  nav.main-nav ul{flex-wrap:nowrap;}
+  nav.main-nav a{white-space:nowrap;padding:6px 11px;font-size:13.5px;}
+  .hero{padding:36px 0 30px;}
+  h1{font-size:29px;}
+  section{padding:38px 0;}
+  .grid-3,.grid-2,.steps{grid-template-columns:1fr;}
+  .cat-list{grid-template-columns:1fr;}
+  .card{padding:20px;}
+  .foot-grid{grid-template-columns:1fr;}
+  .foot-bottom{flex-direction:column;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="head-inner">
+    <a class="logo" href="#top" aria-label="樱花动漫下载 首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#ff6f91"/>
+        <path d="M32 12c6 9 6 31 0 40-6-9-6-31 0-40z" fill="#fff"/>
+        <path d="M12 32c9-6 31-6 40 0-9 6-31 6-40 0z" fill="#fff" opacity=".78"/>
+        <circle cx="32" cy="32" r="5" fill="#e94f78"/>
+      </svg>
+      <span>樱花动漫下载</span>
+    </a>
+    <nav class="main-nav" aria-label="站内导航">
+      <ul>
+        <li><a href="#guide">下载流程</a></li>
+        <li><a href="#catalog">资源分类</a></li>
+        <li><a href="#offline">离线观看</a></li>
+        <li><a href="#notice">下载须知</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">主题首页 · 下载与离线观看</span>
+        <h1><span class="hl">樱花动漫下载</span></h1>
+        <p class="hero-lead">
+          樱花动漫下载面向习惯离线看番的观众，把资源整理、下载流程与观看方式放在同一处说明。
+          本页围绕樱花动漫下载的实际使用场景展开：先弄清下载前需要准备什么，再看懂分类与清晰度选项，
+          最后确认文件保存位置与播放方式，减少反复试错。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#guide">查看下载流程</a>
+          <a class="btn btn-ghost" href="#catalog">浏览资源分类</a>
+        </div>
+        <p class="hero-note">本页为樱花动漫下载主题说明页，下载入口与文件以实际提供情况为准。</p>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 320 240" role="img" aria-label="动漫下载主题插画：屏幕、下载箭头与樱花瓣">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffe3eb"/>
+              <stop offset="1" stop-color="#ffd0dd"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="320" height="240" rx="18" fill="url(#g1)"/>
+          <rect x="52" y="46" width="216" height="128" rx="12" fill="#fff" stroke="#f6bfd0" stroke-width="2"/>
+          <rect x="66" y="60" width="188" height="86" rx="8" fill="#fff7f9"/>
+          <circle cx="104" cy="92" r="16" fill="#ff6f91" opacity=".85"/>
+          <path d="M150 78h84M150 94h64M150 110h74" stroke="#f3dbe3" stroke-width="6" stroke-linecap="round"/>
+          <rect x="130" y="174" width="60" height="8" rx="4" fill="#f6bfd0"/>
+          <rect x="110" y="186" width="100" height="8" rx="4" fill="#f3dbe3"/>
+          <g fill="#ff6f91" opacity=".9">
+            <path d="M252 158c6 4 8 10 4 14s-11 2-14-4 4-13 10-10z"/>
+            <path d="M44 150c5 3 7 9 3 12s-10 1-12-4 4-11 9-8z"/>
+          </g>
+          <path d="M160 122v22m0 0l-9-9m9 9l9-9" stroke="#e94f78" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <p class="cap">资源 · 清晰度 · 保存位置，三件事理清即可开始</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载流程 -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>樱花动漫下载的四步流程</h2>
+        <p>把樱花动漫下载拆成可执行的步骤，比一次性记住所有选项更有效。下面四步对应从准备到播放的完整路径。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>确认设备与空间</h3>
+          <p>先看手机或电脑剩余存储空间。动画单集文件大小与清晰度直接相关，预留两倍于预估文件的空间更稳妥。</p>
+        </div>
+        <div class="step">
+          <h3>选定作品与集数</h3>
+          <p>在分类中定位作品，确认季数与集数范围。樱花动漫下载支持按集选择，整季打包与单集保存的需求各不相同。</p>
+        </div>
+        <div class="step">
+          <h3>选择清晰度</h3>
+          <p>清晰度越高文件越大。小屏设备选择中档即可，平板或投屏观看再考虑更高档位，避免空间被单部作品占满。</p>
+        </div>
+        <div class="step">
+          <h3>保存并校验</h3>
+          <p>下载完成后先播放前几分钟，确认字幕与音轨正常，再决定是否继续补充后续集数。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 资源分类 -->
+  <section id="catalog">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>资源分类与选择建议</h2>
+        <p>樱花动漫下载的内容按题材与放送年份组织，分类的作用是缩小范围，而不是替代判断。以下四类是最常见的查找起点。</p>
+      </div>
+      <div class="cat-list">
+        <div class="cat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e94f78" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M4 9h16"/><path d="M9 5v14"/></svg>
+          <div><strong>TV 动画</strong><span>按季放送，集数完整</span></div>
+        </div>
+        <div class="cat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e94f78" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M10 10l5 2-5 2z" fill="#e94f78" stroke="none"/></svg>
+          <div><strong>剧场版</strong><span>单片长，文件较大</span></div>
+        </div>
+        <div class="cat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e94f78" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+          <div><strong>短篇与 OVA</strong><span>时长灵活，便于试看</span></div>
+        </div>
+        <div class="cat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e94f78" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.6 6.2L21 10l-4.8 4.4L17.6 21 12 17.6 6.4 21l1.4-6.6L3 10l6.4-.8z"/></svg>
+          <div><strong>高分推荐</strong><span>按口碑排序挑选</span></div>
+        </div>
+      </div>
+      <div class="grid grid-3" style="margin-top:20px;">
+        <div class="card">
+          <h3><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#e94f78" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h13"/></svg></span>按年份筛选</h3>
+          <p>新番与旧作的文件命名规则不同，年份筛选能快速排除同名作品，减少选错集数的概率。</p>
+        </div>
+        <div class="card">
+          <h3><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#e94f78" stroke-width="2"><path d="M3 7h18M6 7v12h12V7"/></svg></span>按题材查找</h3>
+          <p>日常、热血、悬疑等标签用于辅助定位。标签只作参考，最终仍以作品简介与集数信息判断。</p>
+        </div>
+        <div class="card">
+          <h3><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#e94f78" stroke-width="2"><path d="M12 4v16M4 12h16"/></svg></span>按集数批量</h3>
+          <p>整季下载适合长期收藏，单集下载适合先试看。樱花动漫下载的两种方式可按需组合使用。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 离线观看 -->
+  <section id="offline">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>离线观看的实用细节</h2>
+        <p>下载只是开始，真正影响体验的是保存之后的管理。樱花动漫下载的文件按作品归档，能省下大量翻找时间。</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>文件命名与归档</h3>
+          <p>建议保留“作品名 + 季数 + 集数”的命名结构，并在同一作品下建立子目录。这样即使更换播放器，也能按顺序识别。</p>
+          <p>批量下载后先按集数排序再重命名，可避免播放列表顺序错乱。</p>
+        </div>
+        <div class="card">
+          <h3>播放器与外挂字幕</h3>
+          <p>常见格式多数播放器可直接打开。若字幕与画面不同步，通常是字幕文件与片源版本不一致，换用同版本字幕即可。</p>
+          <p>投屏时优先选择支持本地文件的播放器，减少转码带来的画质损失。</p>
+        </div>
+        <div class="card">
+          <h3>存储与清理</h3>
+          <p>追番周期长的作品容易堆积，建议每季度检查一次已看内容。樱花动漫下载的文件不占云端空间，清理需手动进行。</p>
+        </div>
+        <div class="card">
+          <h3>网络与流量</h3>
+          <p>在 Wi-Fi 环境下完成下载，移动网络下仅作补充。通勤前预先缓存，是离线观看最常见的用法。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载须知 -->
+  <section id="notice">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>下载前须知</h2>
+        <p>了解适用范围，比记住操作更重要。以下内容说明樱花动漫下载在本页的定位与使用边界。</p>
+      </div>
+      <div class="notice">
+        <p><strong>关于本页：</strong>本页是樱花动漫下载主题的信息说明页，用于介绍下载流程、资源分类与离线观看方法，本身不托管视频文件。</p>
+        <p style="margin-top:10px;"><strong>关于内容：</strong>动画作品的版权归原权利方所有。下载与保存请以所在地区的法律法规及授权渠道的要求为准，仅作个人观看用途。</p>
+        <p style="margin-top:10px;"><strong>关于文件：</strong>清晰度选项、文件大小与可用集数以实际提供情况为准，页面描述不构成对具体资源可得性的承诺。</p>
+      </div>
+      <div class="table-wrap" style="margin-top:20px;">
+        <table>
+          <thead>
+            <tr><th>环节</th><th>需要确认的信息</th><th>常见影响</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>下载前</td><td>存储空间、网络环境</td><td>空间不足会导致中途失败</td></tr>
+            <tr><td>选择时</td><td>季数、集数、清晰度</td><td>选错版本需重新下载</td></tr>
+            <tr><td>保存后</td><td>文件命名、播放器兼容</td><td>影响排序与字幕同步</td></tr>
+            <tr><td>长期使用</td><td>定期清理与备份</td><td>减少重复下载成本</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>樱花动漫下载常见问题</h2>
+        <p>整理访问者最常提出的几个问题，答案围绕实际操作，不涉及具体资源承诺。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>樱花动漫下载对设备有什么要求？</summary>
+          <p>主要取决于存储空间与播放器兼容性。手机端建议预留数 GB 空间，电脑端可放在独立磁盘分区，便于集中管理。</p>
+        </details>
+        <details>
+          <summary>下载后字幕不同步怎么办？</summary>
+          <p>多为字幕文件与片源版本不匹配。更换同版本字幕，或在播放器中微调字幕延迟，通常可以解决。</p>
+        </details>
+        <details>
+          <summary>整季下载和单集下载如何取舍？</summary>
+          <p>确定会看完的作品适合整季保存；只是了解风格的作品先下前两集试看，避免占用过多空间。</p>
+        </details>
+        <details>
+          <summary>为什么建议先校验再继续下载？</summary>
+          <p>先播放几分钟可确认音轨、字幕与画质是否正常，避免批量下载完成后才发现问题而重复操作。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">
+          <svg viewBox="0 0 64 64" aria-hidden="true" style="width:28px;height:28px;">
+            <circle cx="32" cy="32" r="30" fill="#ff6f91"/>
+            <path d="M32 12c6 9 6 31 0 40-6-9-6-31 0-40z" fill="#fff"/>
+            <path d="M12 32c9-6 31-6 40 0-9 6-31 6-40 0z" fill="#fff" opacity=".78"/>
+          </svg>
+          <span>樱花动漫下载</span>
+        </div>
+        <p>樱花动漫下载主题首页，围绕下载流程、资源分类与离线观看方式提供说明，帮助访问者建立清晰的使用路径。</p>
+      </div>
+      <div>
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#guide">下载流程</a></li>
+          <li><a href="#catalog">资源分类</a></li>
+          <li><a href="#offline">离线观看</a></li>
+          <li><a href="#notice">下载须知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>相关说明</h4>
+        <ul>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#notice">使用范围</a></li>
+          <li><a href="#top">返回顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 樱花动漫下载 主题说明页 · 内容以实际提供情况为准</span>
+      <span>动画版权归原权利方所有，请依授权渠道使用</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
